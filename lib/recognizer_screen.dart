@@ -35,9 +35,17 @@ class _RecognizerScreen extends State<RecognizerScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.black,
         title: Text(widget.title),
       ),
       body: Container(
+        decoration: BoxDecoration(
+          color: Colors.grey[50],
+          image: DecorationImage(
+            image: AssetImage('assets/images/bg-bottom.png'),
+            alignment: Alignment.bottomCenter,
+          ),
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -47,7 +55,9 @@ class _RecognizerScreen extends State<RecognizerScreen> {
                 padding: EdgeInsets.all(16),
                 //color: Colors.red,
                 alignment: Alignment.center,
-                child: Text('Write a number'),
+                child: Text('Write a number', style: TextStyle(
+                  fontSize: 36,
+                ),),
               ),
             ),
             Container(
@@ -109,11 +119,12 @@ class _RecognizerScreen extends State<RecognizerScreen> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.black,
         onPressed: () {
           _cleanDrawing();
         },
         tooltip: 'Clean',
-        child: Icon(Icons.delete),
+        child: Icon(Icons.delete,),
       ),
     );
   }

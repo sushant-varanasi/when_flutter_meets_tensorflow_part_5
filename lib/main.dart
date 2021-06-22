@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:handwritten_number_recognizer/recognizer_screen.dart';
 import 'package:handwritten_number_recognizer/screens/login.dart';
+import 'package:handwritten_number_recognizer/screens/options.dart';
 
 void main() => runApp(handwrittenNumberRecognizerApp());
 
@@ -13,7 +14,7 @@ class handwrittenNumberRecognizerApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Login_page(), //RecognizerScreen(title: 'Number recognizer',),
+      home: HomeScreen(), //RecognizerScreen(title: 'Number recognizer',),
     );
   }
 }

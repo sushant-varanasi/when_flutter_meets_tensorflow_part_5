@@ -33,3 +33,11 @@ flutter:
     - assets/yolov2_tiny.txt
     - assets/ssd_mobilenet.tflite
     - assets/ssd_mobilenet.txt
+    - assets/images/
+
+  fonts:
+    - family: CabinSketch
+      fonts:
+        - asset: assets/fonts/CabinSketch-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/CabinSketch-Regular.ttf
