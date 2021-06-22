@@ -70,6 +70,7 @@ class _HomePageState extends State<HomePage> {
         leading: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () {
+              Navigator.pop(context);
               setState(() {
                 _model = "";
               });
