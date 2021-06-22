@@ -6,7 +6,7 @@ import 'dart:math' as math;
 import 'camera.dart';
 import 'bndbox.dart';
 
-const String ssd = "SSD MobileNet";
+const String ssd = "Continue..";
 const String yolo = "Tiny YOLOv2";
 
 class HomePage extends StatefulWidget {
@@ -58,7 +58,15 @@ class _HomePageState extends State<HomePage> {
     Size screen = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.blue,
+        title: Center(
+          child: Text(
+            'Select Model',
+            style: TextStyle(
+              color: Colors.white,
+            ),
+          ),
+        ),
         leading: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () {
@@ -74,20 +82,11 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             RaisedButton(
-              color: Colors.teal,
               child: const Text(
                 ssd,
                 style: TextStyle(color: Colors.black),
               ),
               onPressed: () => onSelect(ssd),
-            ),
-            RaisedButton(
-              color: Colors.teal,
-              child: const Text(
-                yolo,
-                style: TextStyle(color: Colors.black),
-              ),
-              onPressed: () => onSelect(yolo),
             ),
           ],
         ),
