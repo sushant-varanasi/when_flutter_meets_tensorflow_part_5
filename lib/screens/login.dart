@@ -18,7 +18,7 @@ class Login_page extends StatelessWidget {
                   flex: 20,
                   child: Container(
                     child: Image(
-                      image: AssetImage('Assets/SKILL_PP.png'),
+                      image: AssetImage('assets/SKILL_PP.png'),
                     ),
                   ),
                 ),
