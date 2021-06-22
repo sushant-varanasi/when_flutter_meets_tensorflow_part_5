@@ -12,7 +12,7 @@ class handwrittenNumberRecognizerApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: RecognizerScreen(title: 'Number recognizer',),
+      home: Login_page(), //RecognizerScreen(title: 'Number recognizer',),
     );
   }
 }

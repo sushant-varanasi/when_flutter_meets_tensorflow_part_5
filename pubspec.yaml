@@ -13,6 +13,7 @@ dependencies:
   cupertino_icons: ^0.1.2
   tflite: ^1.0.4
   image: ^2.1.4
+  flutter_spinkit: "^4.1.2+1"
 
 dev_dependencies:
   flutter_test:
@@ -22,5 +23,8 @@ flutter:
   uses-material-design: true
 
   assets:
+    - assets/converted_mnist_model.tflite
+    - assets/labels.txt
+    - assets/SKILL_PP.png
     - assets/converted_mnist_model.tflite
     - assets/labels.txt
