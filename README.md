@@ -1,4 +1,4 @@
-# handwritten_number_recognizer
+# SKILL APP
 
 A new Flutter application.
 
