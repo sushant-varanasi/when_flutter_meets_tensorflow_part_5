@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:handwritten_number_recognizer/recognizer_screen.dart';
 import '../constants/app_colors.dart';
-import '../constants/bottom_loading_indicator.dart';
-import 'number_classification/recognizer_screen.dart';
 
 class Writing extends StatefulWidget {
   @override

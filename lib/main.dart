@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:handwritten_number_recognizer/recognizer_screen.dart';
+import 'package:handwritten_number_recognizer/screens/login.dart';
 
 void main() => runApp(handwrittenNumberRecognizerApp());
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:skill_app/screens/coloring.dart';
-import 'package:skill_app/screens/writing.dart';
+import 'package:handwritten_number_recognizer/screens/coloring.dart';
+import 'package:handwritten_number_recognizer/screens/writing.dart';
 import '../constants/app_colors.dart';
 import '../constants/bottom_loading_indicator.dart';
 
@@ -29,18 +29,18 @@ class _homeState extends State<home> {
             child: Text(
               'Choose an option',
               style: TextStyle(
-                color: Colors.black,
+                color: Colors.white,
               ),
             ),
           ),
           elevation: 0,
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.black,
           leading: IconButton(
             onPressed: () {
               Navigator.pop(context);
             },
             icon: Icon(Icons.arrow_back_ios_rounded),
-            color: Colors.black,
+            color: Colors.white,
           ),
         ),
         body: Container(
@@ -95,6 +95,41 @@ class _homeState extends State<home> {
                                       }
                                     }
                                   },*/
+                          ),
+                        ),
+                      )),
+                ),
+                Container(
+                  height: 100,
+                  child: Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      color: Colors.white70,
+                      elevation: 5,
+                      shadowColor: Colors.blueGrey[100],
+                      margin:
+                      EdgeInsets.symmetric(vertical: 5.0, horizontal: 25.0),
+                      child: Container(
+                        color: AppColors.APP_COLOR_1,
+                        child: Center(
+                          child: ListTile(
+                            title: Center(
+                              child: Text(
+                                'DETECT OBJECTS',
+                                style: TextStyle(
+                                  fontSize: 19.0,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                            /*onTap: () async {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            chooseLineNumber_linewise()));
+                              }*/
                           ),
                         ),
                       )),
