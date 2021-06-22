@@ -16,6 +16,9 @@ class _RecognizerScreen extends State<RecognizerScreen> {
   List<Offset> points = List();
   AppBrain brain = AppBrain();
 
+  String numb = '';
+  String conf = '0';
+
   void _cleanDrawing() {
     setState(() {
       points = List();
@@ -42,9 +45,9 @@ class _RecognizerScreen extends State<RecognizerScreen> {
               flex: 1,
               child: Container(
                 padding: EdgeInsets.all(16),
-                color: Colors.red,
+                //color: Colors.red,
                 alignment: Alignment.center,
-                child: Text('Header'),
+                child: Text('Write a number'),
               ),
             ),
             Container(
@@ -75,7 +78,10 @@ class _RecognizerScreen extends State<RecognizerScreen> {
                       points.add(null);
                       List predictions = await brain.processCanvasPoints(points);
                       print(predictions);
-                      setState(() {});
+                      print("lalala");
+                      setState(() { numb = (predictions[0]["index"]).toString();
+                      conf = (((predictions[0]["confidence"])*10)).toStringAsFixed(1);});
+                      print(numb);
                     },
                     child: ClipRect(
                       child: CustomPaint(
@@ -93,9 +99,10 @@ class _RecognizerScreen extends State<RecognizerScreen> {
               flex: 1,
               child: Container(
                 padding: EdgeInsets.all(16),
-                color: Colors.blue,
+                //color: Colors.blue,
                 alignment: Alignment.center,
-                child: Text('Footer'),
+                child: Text('Number drawn: ' + numb +
+                    '\nYour Score: ' + conf + "/10"),
               ),
             ),
           ],
