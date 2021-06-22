@@ -3,6 +3,9 @@ import 'package:handwritten_number_recognizer/screens/coloring.dart';
 import 'package:handwritten_number_recognizer/screens/writing.dart';
 import '../constants/app_colors.dart';
 import '../constants/bottom_loading_indicator.dart';
+import 'package:camera/camera.dart';
+import 'package:handwritten_number_recognizer/obj_det/obj.dart';
+
 
 class home extends StatefulWidget {
   @override
@@ -123,13 +126,15 @@ class _homeState extends State<home> {
                                 ),
                               ),
                             ),
-                            /*onTap: () async {
+                            onTap: () async {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) =>
-                                            chooseLineNumber_linewise()));
-                              }*/
+                                        builder: (context)  {
+                                          //List<CameraDescription> cameras;
+                                          //cameras = await availableCameras();
+                                            main22();}));
+                              }
                           ),
                         ),
                       )),
