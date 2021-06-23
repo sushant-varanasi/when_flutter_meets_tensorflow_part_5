@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-const _url = 'https://flutter.dev';
+const _url1 = 'https://www.youtube.com/watch?v=ZcDkVNTFf2w';
+const _url2 = 'https://www.youtube.com/watch?v=xIhzDiB0djw';
+const _url3 = 'https://www.youtube.com/watch?v=69RWH2hwhCo';
+const _url4 = 'https://www.youtube.com/watch?v=Jj7xJTHR4V8';
+const _url5 = 'https://www.youtube.com/watch?v=OMVTV73iWRM';
+const _url6 = 'https://www.youtube.com/watch?v=iuBwkDU7FkY';
+const _url7 = 'https://www.youtube.com/watch?v=qxn_-sd14Oc';
+const _url8 = 'https://www.youtube.com/watch?v=WGGUvaOMtoM';
 
-void _launchURL() async =>
-    await canLaunch(_url) ? await launch(_url) : throw 'Could not launch $_url';
+void _launchURL() async => await canLaunch(_url1)
+    ? await launch(_url1)
+    : throw 'Could not launch $_url1';
 
 class Story extends StatefulWidget {
   @override
