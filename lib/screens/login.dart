@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:handwritten_number_recognizer/screens/options.dart';
 
 import 'home.dart';
 
@@ -11,6 +12,13 @@ class Login_page extends StatelessWidget {
         backgroundColor: Colors.white,
         body: SafeArea(
           child: Container(
+            decoration: BoxDecoration(
+              color: Colors.grey[50],
+              image: DecorationImage(
+                image: AssetImage('assets/images/bg-bottom.png'),
+                alignment: Alignment.bottomCenter,
+              ),
+            ),
             padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
             child: Column(
               children: [
@@ -51,13 +59,7 @@ class Login_page extends StatelessWidget {
                         border: OutlineInputBorder(), labelText: 'Password'),
                   ),
                 ),
-                Expanded(
-                  flex: 5,
-                  child: TextButton(
-                    child: Text('Forgot Password'),
-                    onPressed: () {},
-                  ),
-                ),
+
                 Expanded(
                   flex: 8,
                   child: Container(
@@ -65,13 +67,13 @@ class Login_page extends StatelessWidget {
                     child: TextButton(
                       onPressed: () async {
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => home()));
+                            MaterialPageRoute(builder: (context) => HomeScreen()));
                       },
                       child: Text(
                         'Login',
                       ),
                       style: TextButton.styleFrom(
-                        backgroundColor: Colors.blueAccent,
+                        backgroundColor: Colors.black,
                         primary: Colors.white,
                         padding: EdgeInsets.all(5),
                         minimumSize: Size(400, 30),
@@ -82,10 +84,11 @@ class Login_page extends StatelessWidget {
                 Expanded(
                   flex: 5,
                   child: TextButton(
+                    child: Text('Forgot Password'),
                     onPressed: () {},
-                    child: Text('SignUp'),
                   ),
                 ),
+
               ],
             ),
           ),
