@@ -10,7 +10,7 @@ class HomeScreen extends StatelessWidget {
       title: 'Colors',
       primaryColor: Colors.orangeAccent[100],
       secondaryColor: Colors.orange,
-     /* screen: ColorsScreen(
+      /* screen: ColorsScreen(
         title: 'Colors',
         primaryColor: Colors.orangeAccent[100],
         secondaryColor: Colors.orange,
@@ -27,6 +27,12 @@ class HomeScreen extends StatelessWidget {
       primaryColor: Colors.purpleAccent[100],
       secondaryColor: Colors.purple,
       screen: write(),
+    ),
+    CategoryCard(
+      title: 'Stories',
+      primaryColor: Colors.purpleAccent[100],
+      secondaryColor: Colors.purple,
+      /*screen: Stories(),*/
     ),
     CategoryCard(
       title: 'Convert',
