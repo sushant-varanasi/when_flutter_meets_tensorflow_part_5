@@ -3,6 +3,7 @@ import 'package:handwritten_number_recognizer/recognizer_screen.dart';
 import 'package:handwritten_number_recognizer/screens/addition.dart';
 import 'package:handwritten_number_recognizer/screens/login.dart';
 import 'package:handwritten_number_recognizer/screens/options.dart';
+import 'package:handwritten_number_recognizer/screens/stories.dart';
 
 void main() => runApp(handwrittenNumberRecognizerApp());
 

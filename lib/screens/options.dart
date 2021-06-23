@@ -3,19 +3,10 @@ import 'package:handwritten_number_recognizer/category_card.dart';
 import 'package:handwritten_number_recognizer/main.dart';
 import 'package:handwritten_number_recognizer/obj_det/obj.dart';
 import 'package:handwritten_number_recognizer/screens/ABC.dart';
+import 'package:handwritten_number_recognizer/screens/stories.dart';
 
 class HomeScreen extends StatelessWidget {
   final List<Widget> _categories = [
-    CategoryCard(
-      title: 'Colors',
-      primaryColor: Colors.orangeAccent[100],
-      secondaryColor: Colors.orange,
-     /* screen: ColorsScreen(
-        title: 'Colors',
-        primaryColor: Colors.orangeAccent[100],
-        secondaryColor: Colors.orange,
-      ),*/
-    ),
     CategoryCard(
       title: 'Shapes',
       primaryColor: Colors.greenAccent[100],
@@ -29,14 +20,10 @@ class HomeScreen extends StatelessWidget {
       screen: write(),
     ),
     CategoryCard(
-      title: 'Convert',
-      primaryColor: Colors.redAccent[100],
-      secondaryColor: Colors.red,
-      /* screen: ShapesScreen(
-        title: 'Shapes',
-        primaryColor: Colors.redAccent[100],
-        secondaryColor: Colors.red,
-      ),*/
+      title: 'Stories',
+      primaryColor: Colors.orangeAccent[100],
+      secondaryColor: Colors.orange,
+      screen: Story(),
     ),
   ];
 
