@@ -14,81 +14,139 @@ class _StoryState extends State<Story> {
         appBar: AppBar(
           title: Center(
             child: Text(
-              'YOUR STORIES',
+              'STORIES',
               style: TextStyle(
-                color: Colors.black,
+                color: Colors.white,
               ),
             ),
           ),
           elevation: 0,
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.black,
           leading: IconButton(
             onPressed: () {
               Navigator.pop(context);
             },
             icon: Icon(Icons.arrow_back_ios_rounded),
-            color: Colors.black,
+            color: Colors.white,
           ),
         ),
         body: Container(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+          decoration: BoxDecoration(
+            color: Colors.grey[50],
+            image: DecorationImage(
+              image: AssetImage('assets/images/bg-bottom.png'),
+              alignment: Alignment.bottomCenter,
+            ),
+          ),
+          child: ListView(
             children: [
               // ignore: deprecated_member_use
-              new RaisedButton(
-                child: new Text("Story"),
-                color: Colors.blueAccent[600],
-                onPressed: null,
+              ButtonTheme(
+                minWidth: 200.0,
+                height: 100.0,
+                child: new RaisedButton(
+                  child: new Text("Story", style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                  ),),
+                  color: Colors.redAccent,
+                  onPressed: null,
+                ),
+              ),
+              SizedBox(height: 20),
+              ButtonTheme(
+                minWidth: 200.0,
+                height: 100.0,
+                child: new RaisedButton(
+                  child: new Text("Story", style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                  ),),
+                  color: Colors.orangeAccent[600],
+                  onPressed: null,
+                ),
+              ),
+              SizedBox(height: 20),
+              ButtonTheme(
+                minWidth: 200.0,
+                height: 100.0,
+                child: new RaisedButton(
+                  child: new Text("Story", style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                  ),),
+                  color: Colors.deepOrangeAccent[600],
+                  onPressed: null,
+                ),
+              ),
+              SizedBox(height: 20),
+              ButtonTheme(
+                minWidth: 200.0,
+                height: 100.0,
+                child: new RaisedButton(
+                  child: new Text("Story", style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                  ),),
+                  color: Colors.yellowAccent[600],
+                  onPressed: null,
+                ),
+              ),
+              SizedBox(height: 20),
+              ButtonTheme(
+                minWidth: 200.0,
+                height: 100.0,
+                child: new RaisedButton(
+                  child: new Text("Story", style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                  ),),
+                  color: Colors.lightGreenAccent[600],
+                  onPressed: null,
+                ),
+              ),
+              SizedBox(height: 20),
+              ButtonTheme(
+                minWidth: 200.0,
+                height: 100.0,
+                child: new RaisedButton(
+                  child: new Text("Story", style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                  ),),
+                  color: Colors.greenAccent[600],
+                  onPressed: null,
+                ),
+              ),
+              SizedBox(height: 20),
+              ButtonTheme(
+                minWidth: 200.0,
+                height: 100.0,
+                child: new RaisedButton(
+                  child: new Text("Story", style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                  ),),
+                  color: Colors.blueAccent[600],
+                  onPressed: null,
+                ),
+              ),
+              SizedBox(height: 20),
+              ButtonTheme(
+                minWidth: 200.0,
+                height: 100.0,
+                child: new RaisedButton(
+                  child: new Text("Story", style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                  ),),
+                  color: Colors.blueAccent,
+                  onPressed: null,
+                ),
               ),
               SizedBox(height: 20),
               // ignore: deprecated_member_use
-              new RaisedButton(
-                child: new Text("Story"),
-                color: Colors.blueAccent[600],
-                onPressed: null,
-              ),
-              SizedBox(height: 20),
-              // ignore: deprecated_member_use
-              new RaisedButton(
-                child: new Text("Story"),
-                color: Colors.blueAccent[600],
-                onPressed: null,
-              ),
-              SizedBox(height: 20),
-              // ignore: deprecated_member_use
-              new RaisedButton(
-                child: new Text("Story"),
-                color: Colors.blueAccent[600],
-                onPressed: null,
-              ),
-              SizedBox(height: 20),
-              // ignore: deprecated_member_use
-              new RaisedButton(
-                child: new Text("Story"),
-                color: Colors.blueAccent[600],
-                onPressed: null,
-              ),
-              SizedBox(height: 20),
-              // ignore: deprecated_member_use
-              new RaisedButton(
-                child: new Text("Story"),
-                color: Colors.blueAccent[600],
-                onPressed: null,
-              ),
-              SizedBox(height: 20),
-              // ignore: deprecated_member_use
-              new RaisedButton(
-                child: new Text("Story"),
-                color: Colors.blueAccent[600],
-                onPressed: null,
-              ),
-              SizedBox(height: 20),
-              // ignore: deprecated_member_use
-              new RaisedButton(
-                child: new Text("Story"),
-                color: Colors.blueAccent[600],
-                onPressed: null,
-              ),
+
             ],
           ),
         ),
