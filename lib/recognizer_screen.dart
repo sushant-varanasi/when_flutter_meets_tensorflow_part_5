@@ -55,9 +55,12 @@ class _RecognizerScreen extends State<RecognizerScreen> {
                 padding: EdgeInsets.all(16),
                 //color: Colors.red,
                 alignment: Alignment.center,
-                child: Text('Write a number', style: TextStyle(
-                  fontSize: 36,
-                ),),
+                child: Text(
+                  'Write a number',
+                  style: TextStyle(
+                    fontSize: 36,
+                  ),
+                ),
               ),
             ),
             Container(
@@ -86,11 +89,15 @@ class _RecognizerScreen extends State<RecognizerScreen> {
                     },
                     onPanEnd: (details) async {
                       points.add(null);
-                      List predictions = await brain.processCanvasPoints(points);
+                      List predictions =
+                          await brain.processCanvasPoints(points);
                       print(predictions);
                       print("lalala");
-                      setState(() { numb = (predictions[0]["index"]).toString();
-                      conf = (((predictions[0]["confidence"])*10)).toStringAsFixed(1);});
+                      setState(() {
+                        numb = (predictions[0]["index"]).toString();
+                        conf = (((predictions[0]["confidence"]) * 10))
+                            .toStringAsFixed(1);
+                      });
                       print(numb);
                     },
                     child: ClipRect(
@@ -111,8 +118,9 @@ class _RecognizerScreen extends State<RecognizerScreen> {
                 padding: EdgeInsets.all(16),
                 //color: Colors.blue,
                 alignment: Alignment.center,
-                child: Text('Number drawn: ' + numb +
-                    '\nYour Score: ' + conf + "/10"),
+                child: int.parse(conf) >= 9.8
+                    ? Text('Your answer is Correct')
+                    : Text('Your answer is Incorrect'),
               ),
             ),
           ],
@@ -124,7 +132,9 @@ class _RecognizerScreen extends State<RecognizerScreen> {
           _cleanDrawing();
         },
         tooltip: 'Clean',
-        child: Icon(Icons.delete,),
+        child: Icon(
+          Icons.delete,
+        ),
       ),
     );
   }

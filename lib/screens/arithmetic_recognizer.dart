@@ -6,7 +6,6 @@ import 'package:handwritten_number_recognizer/drawing_painter.dart';
 import 'package:handwritten_number_recognizer/brain.dart';
 
 class arithmetic extends StatefulWidget {
-
   arithmetic({Key key, this.title}) : super(key: key);
   final String title;
 
@@ -36,8 +35,8 @@ class _RecognizerScreen extends State<arithmetic> {
   @override
   Widget build(BuildContext context) {
     Random random = new Random();
-    int randomNumber1 = random.nextInt(9) + 1;
-    int randomNumber2 = random.nextInt(9) + 1;
+    int randomNumber1 = random.nextInt(5) + 1;
+    int randomNumber2 = random.nextInt(4) + 1;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
@@ -57,7 +56,6 @@ class _RecognizerScreen extends State<arithmetic> {
             Expanded(
               flex: 1,
               child: Container(
-
                 child: Text(
                   randomNumber1.toString() +
                       " + " +
@@ -100,11 +98,15 @@ class _RecognizerScreen extends State<arithmetic> {
                     },
                     onPanEnd: (details) async {
                       points.add(null);
-                      List predictions = await brain.processCanvasPoints(points);
+                      List predictions =
+                          await brain.processCanvasPoints(points);
                       print(predictions);
                       print("lalala");
-                      setState(() { numb = (predictions[0]["index"]).toString();
-                      conf = (((predictions[0]["confidence"])*10)).toStringAsFixed(1);});
+                      setState(() {
+                        numb = (predictions[0]["index"]).toString();
+                        conf = (((predictions[0]["confidence"]) * 10))
+                            .toStringAsFixed(1);
+                      });
                       print(numb);
                     },
                     child: ClipRect(
@@ -125,8 +127,14 @@ class _RecognizerScreen extends State<arithmetic> {
                 padding: EdgeInsets.all(16),
                 //color: Colors.blue,
                 alignment: Alignment.center,
-                child: Text('Number drawn: ' + numb +
-                    '\nYour Sum is Correct'),
+                child: numb == randomNumber1 + randomNumber2
+                    ? Text('Number drawn: ' + numb + '\nYour Sum is Correct')
+                    : Text('Number drawn: ' + numb + '\nYour Sum is Incorrect'),
+                // (condition == true){
+                //   Text('Number drawn: ' + numb + '\nYour Sum is Correct'),;
+                // }else{
+                //   Text('Number drawn: ' + numb + '\nYour Sum is Incorrect'),;
+                // }
               ),
             ),
           ],
@@ -138,7 +146,9 @@ class _RecognizerScreen extends State<arithmetic> {
           _cleanDrawing();
         },
         tooltip: 'Clean',
-        child: Icon(Icons.delete,),
+        child: Icon(
+          Icons.delete,
+        ),
       ),
     );
   }
