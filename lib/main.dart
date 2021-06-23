@@ -6,7 +6,6 @@ import 'package:handwritten_number_recognizer/screens/options.dart';
 void main() => runApp(handwrittenNumberRecognizerApp());
 
 class handwrittenNumberRecognizerApp extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
