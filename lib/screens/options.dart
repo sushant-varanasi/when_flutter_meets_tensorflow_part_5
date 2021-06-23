@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
       title: 'Shapes',
       primaryColor: Colors.greenAccent[100],
       secondaryColor: Colors.green,
-      screen: write(),
+      screen: MyApp2()//write(), //main22(),
     ),
     CategoryCard(
       title: 'ABC',

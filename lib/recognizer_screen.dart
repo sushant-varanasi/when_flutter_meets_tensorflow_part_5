@@ -118,9 +118,8 @@ class _RecognizerScreen extends State<RecognizerScreen> {
                 padding: EdgeInsets.all(16),
                 //color: Colors.blue,
                 alignment: Alignment.center,
-                child: int.parse(conf) >= 9.8
-                    ? Text('Your answer is Correct')
-                    : Text('Your answer is Incorrect'),
+                child: Text('Number drawn: ' + numb +
+                    '\nYour Score: ' + conf + "/10"),
               ),
             ),
           ],

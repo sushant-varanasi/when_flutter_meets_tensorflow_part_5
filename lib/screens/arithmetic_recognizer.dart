@@ -5,7 +5,14 @@ import 'package:handwritten_number_recognizer/constants.dart';
 import 'package:handwritten_number_recognizer/drawing_painter.dart';
 import 'package:handwritten_number_recognizer/brain.dart';
 
+
+Random random = new Random();
+int randomNumber1 = random.nextInt(5) + 1;
+int randomNumber2 = random.nextInt(4) + 1;
+
 class arithmetic extends StatefulWidget {
+
+
   arithmetic({Key key, this.title}) : super(key: key);
   final String title;
 
@@ -14,6 +21,9 @@ class arithmetic extends StatefulWidget {
 }
 
 class _RecognizerScreen extends State<arithmetic> {
+
+
+
   List<Offset> points = List();
   AppBrain brain = AppBrain();
 
@@ -34,9 +44,6 @@ class _RecognizerScreen extends State<arithmetic> {
 
   @override
   Widget build(BuildContext context) {
-    Random random = new Random();
-    int randomNumber1 = random.nextInt(5) + 1;
-    int randomNumber2 = random.nextInt(4) + 1;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
@@ -108,6 +115,8 @@ class _RecognizerScreen extends State<arithmetic> {
                             .toStringAsFixed(1);
                       });
                       print(numb);
+                      //print(randomNumber1 + randomNumber2);
+                      //print(randomNumber2);
                     },
                     child: ClipRect(
                       child: CustomPaint(
@@ -127,9 +136,10 @@ class _RecognizerScreen extends State<arithmetic> {
                 padding: EdgeInsets.all(16),
                 //color: Colors.blue,
                 alignment: Alignment.center,
-                child: numb == randomNumber1 + randomNumber2
-                    ? Text('Number drawn: ' + numb + '\nYour Sum is Correct')
-                    : Text('Number drawn: ' + numb + '\nYour Sum is Incorrect'),
+                child: Text('Number drawn: ' + numb )
+                //numb == randomNumber1 + randomNumber2
+                    //? Text('Number drawn: ' + numb + '\nYour Sum is Correct')
+                    //: Text('Number drawn: ' + numb + '\nYour Sum is Incorrect'),
                 // (condition == true){
                 //   Text('Number drawn: ' + numb + '\nYour Sum is Correct'),;
                 // }else{

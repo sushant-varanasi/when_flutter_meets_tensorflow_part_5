@@ -8,18 +8,22 @@ import 'home_obj.dart';
 
 List<CameraDescription> cameras;
 
-Future<Null> main22() async {
+Future<CameraDescription> main22() async {
   try {
     cameras = await availableCameras();
   } on CameraException catch (e) {
     print('Error: $e.code\nError Message: $e.message');
   }
-  runApp(new MyApp());
+  //new MyApp2();
+  //return FutureBuilder(cameras);
 }
 
-class MyApp extends StatelessWidget {
+class MyApp2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
+    //cameras = main22();
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'RealTime Detection',
