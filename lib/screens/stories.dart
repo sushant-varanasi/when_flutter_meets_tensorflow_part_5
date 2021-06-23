@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+const _url = 'https://flutter.dev';
+
+void _launchURL() async =>
+    await canLaunch(_url) ? await launch(_url) : throw 'Could not launch $_url';
 
 class Story extends StatefulWidget {
   @override
@@ -44,13 +50,17 @@ class _StoryState extends State<Story> {
               ButtonTheme(
                 minWidth: 200.0,
                 height: 100.0,
+                // ignore: deprecated_member_use
                 child: new RaisedButton(
-                  child: new Text("Story", style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 24,
-                  ),),
+                  child: new Text(
+                    "Story",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 24,
+                    ),
+                  ),
                   color: Colors.redAccent,
-                  onPressed: null,
+                  onPressed: _launchURL,
                 ),
               ),
               SizedBox(height: 20),
@@ -58,10 +68,13 @@ class _StoryState extends State<Story> {
                 minWidth: 200.0,
                 height: 100.0,
                 child: new RaisedButton(
-                  child: new Text("Story", style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 24,
-                  ),),
+                  child: new Text(
+                    "Story",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 24,
+                    ),
+                  ),
                   color: Colors.orangeAccent[600],
                   onPressed: null,
                 ),
@@ -71,10 +84,13 @@ class _StoryState extends State<Story> {
                 minWidth: 200.0,
                 height: 100.0,
                 child: new RaisedButton(
-                  child: new Text("Story", style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 24,
-                  ),),
+                  child: new Text(
+                    "Story",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 24,
+                    ),
+                  ),
                   color: Colors.deepOrangeAccent[600],
                   onPressed: null,
                 ),
@@ -84,10 +100,13 @@ class _StoryState extends State<Story> {
                 minWidth: 200.0,
                 height: 100.0,
                 child: new RaisedButton(
-                  child: new Text("Story", style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 24,
-                  ),),
+                  child: new Text(
+                    "Story",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 24,
+                    ),
+                  ),
                   color: Colors.yellowAccent[600],
                   onPressed: null,
                 ),
@@ -97,10 +116,13 @@ class _StoryState extends State<Story> {
                 minWidth: 200.0,
                 height: 100.0,
                 child: new RaisedButton(
-                  child: new Text("Story", style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 24,
-                  ),),
+                  child: new Text(
+                    "Story",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 24,
+                    ),
+                  ),
                   color: Colors.lightGreenAccent[600],
                   onPressed: null,
                 ),
@@ -110,10 +132,13 @@ class _StoryState extends State<Story> {
                 minWidth: 200.0,
                 height: 100.0,
                 child: new RaisedButton(
-                  child: new Text("Story", style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 24,
-                  ),),
+                  child: new Text(
+                    "Story",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 24,
+                    ),
+                  ),
                   color: Colors.greenAccent[600],
                   onPressed: null,
                 ),
@@ -123,10 +148,13 @@ class _StoryState extends State<Story> {
                 minWidth: 200.0,
                 height: 100.0,
                 child: new RaisedButton(
-                  child: new Text("Story", style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 24,
-                  ),),
+                  child: new Text(
+                    "Story",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 24,
+                    ),
+                  ),
                   color: Colors.blueAccent[600],
                   onPressed: null,
                 ),
@@ -136,17 +164,19 @@ class _StoryState extends State<Story> {
                 minWidth: 200.0,
                 height: 100.0,
                 child: new RaisedButton(
-                  child: new Text("Story", style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 24,
-                  ),),
+                  child: new Text(
+                    "Story",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 24,
+                    ),
+                  ),
                   color: Colors.blueAccent,
                   onPressed: null,
                 ),
               ),
               SizedBox(height: 20),
               // ignore: deprecated_member_use
-
             ],
           ),
         ),
