@@ -1,14 +1,14 @@
 ???
 person
-bicycle
-car
+bicycle:2 Circles
+car: 4 circles
 motorcycle
 airplane
 bus
 train
 truck
 boat
-traffic light
+traffic light: 3 circles
 fire hydrant
 ???
 stop sign
