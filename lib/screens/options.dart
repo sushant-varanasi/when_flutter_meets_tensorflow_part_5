@@ -3,6 +3,7 @@ import 'package:handwritten_number_recognizer/category_card.dart';
 import 'package:handwritten_number_recognizer/main.dart';
 import 'package:handwritten_number_recognizer/obj_det/obj.dart';
 import 'package:handwritten_number_recognizer/screens/ABC.dart';
+import 'package:handwritten_number_recognizer/screens/arithmetic_recognizer.dart';
 import 'package:handwritten_number_recognizer/screens/stories.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -24,6 +25,12 @@ class HomeScreen extends StatelessWidget {
       primaryColor: Colors.orangeAccent[100],
       secondaryColor: Colors.orange,
       screen: Story(),
+    ),
+    CategoryCard(
+      title: '123',
+      primaryColor: Colors.redAccent[100],
+      secondaryColor: Colors.red,
+      screen: arithmetic(title: 'Arithmetic',),
     ),
   ];
 
